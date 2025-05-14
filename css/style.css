@@ -1,0 +1,124 @@
+/* Colores institucionales */
+:root {
+  --azul-uc: #003366;
+  --amarillo-uc: #ffcc00;
+  --gris-suave: #f4f4f4;
+  --gris-texto: #4a4a4a;
+}
+
+/* Tipografía */
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--gris-texto);
+  line-height: 1.6;
+  background-color: white;
+}
+
+/* Barra de navegación */
+.navbar {
+  background-color: var(--azul-uc);
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: white !important;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--amarillo-uc) !important;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('banner.jpg') center center/cover no-repeat;
+  color: white;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.25rem;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: var(--amarillo-uc);
+  border-color: var(--amarillo-uc);
+  color: #003366;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #e6b800;
+  border-color: #e6b800;
+  color: #002244;
+}
+
+.btn-outline-light {
+  border-color: white;
+  color: white;
+}
+
+.btn-outline-light:hover {
+  background-color: white;
+  color: var(--azul-uc);
+}
+
+/* Secciones */
+section {
+  padding: 60px 0;
+}
+
+section h2 {
+  color: var(--azul-uc);
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Fondo claro */
+.bg-light {
+  background-color: var(--gris-suave) !important;
+}
+
+/* Galería de imágenes */
+.img-fluid {
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Footer o sección contacto */
+.bg-dark {
+  background-color: var(--azul-uc) !important;
+}
+
+.bg-dark p, .bg-dark a {
+  color: white;
+}
+
+/* Formulario */
+form input, form textarea {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+form input:focus, form textarea:focus {
+  border-color: var(--amarillo-uc);
+  box-shadow: 0 0 0 0.2rem rgba(255, 204, 0, 0.25);
+}
+
+/* Responsive ajuste al hero */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
