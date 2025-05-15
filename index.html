@@ -8,6 +8,20 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js"></script>
   <style>
+    .bg-custom {
+      background-color: #e5d8be !important;
+    }
+
+    .navbar-light .navbar-nav .nav-link,
+    .navbar-light .navbar-brand {
+      color: black !important; /* letras negras */
+      font-weight: bold;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover {
+      color: #444 !important; /* opcional: tono más oscuro al pasar el mouse */
+    }
+
     .hero {
       background: white;
       color: white;
@@ -72,13 +86,31 @@
       right: 0;
     }
 
+    /* Cambiar el fondo y color de texto de los botones del acordeón */
+    .accordion-button {
+      background-color: #e5d8be !important;
+      color: #000 !important; /* letras negras para contraste */
+    }
+
+    /* Cuando el botón está colapsado (cerrado) */
+    .accordion-button.collapsed {
+      background-color: #e5d8be !important;
+      color: #000 !important;
+    }
+
+    /* Borde y sombra al expandir */
+    .accordion-button:not(.collapsed) {
+      box-shadow: none;
+    }
+
 
   </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-custom sticky-top">  
   <div class="container">
     <div class="col-md-4"><img src="img/simboloPsicologia.png" class="rounded-circle mb-2" width="70"></div>
     <a class="navbar-brand" href="#">Psicologia y Salud</a>
@@ -106,7 +138,7 @@
 <!-- Nosotros -->
 <section id="nosotros" class="py-5 bg-light">
   <div class="container">
-    <h2 class="section-title text-center">Acerca de Nosotros</h2>
+    <h2 class="section-title text-center text-dark">Acerca de Nosotros</h2>
     <p class="text-center mb-4">Nuestro equipo multifuncional cuenta con profesionales del area de la salud y Psicologia</p>
     <div class="row text-center">
       <div class="col-md-4"><h5 style="font-weight: bold;">Misión</h5><p>Atención médica integral, talleres, terapias</p></div>
@@ -119,7 +151,7 @@
 <!-- Nuestro Equipo -->
 <section id="equipo" class="py-5">
   <div class="container">
-    <h2 class="section-title text-center">Nuestro Equipo</h2>
+    <h2 class="section-title text-center text-dark">Nuestro Equipo</h2>
     <div class="row text-center">
       <div class="col-md-4"><img src="img/antonia.png" class="rounded-circle mb-2" width="120"><p>Tu</p></div>
       <div class="col-md-4"><img src="img/ethan.png" class="rounded-circle mb-2" width="120"><p>El</p></div>
@@ -129,89 +161,85 @@
   </div>
 </section>
 
-<!-- Qué Hacemos con Acordeón --><!-- Qué Hacemos con Acordeón -->
-<!-- Qué Hacemos con Acordeón -->
+<!-- Qué Hacemos con Acordeon -->
 <section id="quehacemos" class="py-5 bg-light">
   <div class="container">
-    <h2 class="section-title text-center">Qué Hacemos</h2>
-    <div class="accordion mt-4" id="accordionQueHacemos">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading1">
-          <button class="accordion-button fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true">
-            Talleres
-          </button>
-        </h2>
-        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#accordionQueHacemos">
-          <div class="accordion-body" style="background-color: #fdfbfb;">
-             Realizamos talleres en distintas disciplinas, como meditación o Eneagrama, las que te permitirán tener una mayor conexión. Nos hemos adaptado para poder seguir entregándote estas valiosas herramientas de forma online.
-          </div>
-        </div>
-      </div>
+  <h2 class="section-title text-center text-dark">Qué Hacemos</h2>
+  <div class="accordion mt-4" id="accordionQueHacemos">
 
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading2">
-          <button class="accordion-button fw-bold fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
-            Charlas
-          </button>
-        </h2>
-        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionQueHacemos">
-          <div class="accordion-body" style="background-color: #fdfbfb;">
-            Tradicionalmente nos reuníamos en el Hotel Sheraton para tocar distintos temas. Hoy, podemos trasladar esta instancia al mundo online para poder seguir entregándote valiosas herramientas para abrir la mente y el corazón y elevar tu nivel de conciencia. A lo largo de 25 años, las charlas han permitido a miles de personas ver sus vidas y el mundo desde una nueva perspectiva, acercándoles de manera amorosa y enérgica hacia su propia felicidad, invitándolos a sanar sus relaciones familiares, laborales y amorosas.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading3">
-          <button class="accordion-button fw-bold fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
-            Terapias Individuales
-          </button>
-        </h2>
-        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionQueHacemos">
-          <div class="accordion-body" style="background-color: #fdfbfb;">
-            Un espacio protegido donde podrás sanar, trabajar y profundizar en tu proceso personal.
-
-            Duración: 60 minutos por sesión
-            Valor   : $ 000 por sesión
-
-            RESERVAS
-            +56 9 1234 5678
-
-            Protocolo de atención y formas de pago
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading4">
-          <button class="accordion-button fw-bold fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
-            Terapias de Pareja
-          </button>
-        </h2>
-        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionQueHacemos">
-          <div class="accordion-body" style="background-color: #fdfbfb;">
-            Una oportunidad donde parejas, hermanos, amigos o socios pueden trabajar y profundizar en sus procesos y sanar sus relaciones.
-
-            Duración: 90 minutos por sesión
-            Valor: $ 000 por sesión
-
-             
-
-            RESERVAS
-            +56 9 1234 5678
-
+    <!-- PRIMER ITEM: ABIERTO -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading1">
+        <button class="accordion-button fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true">
+          Talleres
+        </button>
+      </h2>
+      <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#accordionQueHacemos">
+        <div class="accordion-body" style="background-color: #fdfbfb;">
+          <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+              <img src="img/imagen1.jpg" alt="Talleres" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-8">
+              <p>Contenido del primer ítem...</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- SEGUNDO ITEM: CERRADO -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading2">
+        <button class="accordion-button fw-bold fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false">
+          Charlas
+        </button>
+      </h2>
+      <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionQueHacemos">
+        <div class="accordion-body" style="background-color: #fdfbfb;">
+          <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+              <img src="img/imagen2.jpg" alt="Charlas" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-8">
+              <p>Contenido del segundo ítem...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TERCER ITEM: CERRADO -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading3">
+        <button class="accordion-button fw-bold fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false">
+          Terapias
+        </button>
+      </h2>
+      <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionQueHacemos">
+        <div class="accordion-body" style="background-color: #fdfbfb;">
+          <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+              <img src="img/imagen3.jpg" alt="Terapias" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-8">
+              <p>Contenido del tercer ítem...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
+</div>
+
 </section>
 
 <!-- Galería -->
 <!-- Galería estilo cinta con botones -->
 <section id="galeria" class="py-5">
   <div class="container position-relative">
-    <h2 class="section-title text-center mb-4">Galería</h2>
+    <h2 class="section-title text-center mb-4 text-dark">Galería</h2>
 
     <button class="btn btn-secondary gallery-btn left" onclick="scrollGallery(-1)">
       &#8592;
@@ -233,9 +261,9 @@
 
 
 <!-- Contacto -->
-<section id="contacto" class="py-5 bg-dark text-white">
+<section id="contacto" class="py-5" style="background-color: #e5d8be; color: #000;">
   <div class="container">
-    <h2 class="section-title text-center">Contacto</h2>
+    <h2 class="section-title text-center text-dark">Contacto</h2>
     <p class="text-center">Escríbenos o síguenos en redes sociales</p>
     <div class="row justify-content-center mt-4">
       <div class="col-md-6">
@@ -243,18 +271,19 @@
           <input type="text" class="form-control mb-2" placeholder="Tu nombre">
           <input type="email" class="form-control mb-2" placeholder="Tu correo">
           <textarea class="form-control mb-2" rows="3" placeholder="Mensaje"></textarea>
-          <center><button class="btn btn-outline-light">Enviar</button></center>
+          <center><button class="btn btn-dark">Enviar</button></center>
         </form>
       </div>
     </div>
     <div class="text-center mt-4">
       <p>Correo: contacto@gmail.com | Teléfono: +56 9 1234 5678</p>
-      <a href="https://instagram.com" class="text-white me-2">
+      <a href="https://instagram.com" class="me-2">
         <img src="img/logoInsta.jpg" class="rounded-circle mb-2" width="120">
       </a>
     </div>
   </div>
 </section>
+
 
 <!-- Footer -->
 <footer class="text-center">
@@ -262,33 +291,6 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-!-- Modal Donación con Copiar -->
-<div class="modal fade" id="modalDonacion" tabindex="-1" aria-labelledby="modalDonacionLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title" id="modalDonacionLabel">Transferencia Bancaria</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <div id="datosDonacion">
-          <p><strong>Nombre:</strong> Mi nombre</p>
-          <p><strong>RUT:</strong> 1-9</p>
-          <p><strong>Banco:</strong> Santander</p>
-          <p><strong>Cuenta Corriente:</strong> 0000000</p>
-          <p><strong>Correo:</strong>micorreo@gmail.com</p>
-        </div>
-        <button class="btn btn-outline-primary mt-3" onclick="copiarDatos()">Copiar datos</button>
-        <div id="mensajeCopiado" class="mt-2 text-success" style="display: none;">¡Datos copiados al portapapeles!</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- FIn modal -->
 
 </body>
 </html>
